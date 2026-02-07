@@ -21,7 +21,7 @@ gs = fig.add_gridspec(2, 2)
 ax1 = fig.add_subplot(gs[0, 0])
 sns.lineplot(x=dataTahunan.index, y=dataTahunan.values, marker='o', markersize=10, 
              linewidth=3, color='royalblue', ax=ax1)
-ax1.set_title('1.Tren Pertumbuhan Tahunan', fontsize=15, fontweight='bold', pad=15)
+ax1.set_title('1.Tren Pertumbuhan Tahunan', fontsize=12, fontweight='bold', pad=15)
 ax1.set_xticks(dataTahunan.index)
 
 for x, y in zip(dataTahunan.index, dataTahunan.values):
@@ -31,13 +31,13 @@ for x, y in zip(dataTahunan.index, dataTahunan.values):
 ax2 = fig.add_subplot(gs[0, 1])
 sns.barplot(x=topNegara.values, y=topNegara.index, hue=topNegara.index, 
             palette='viridis', legend=False, ax=ax2)
-ax2.set_title('2.Top singko 5 Negara Terbanyak', fontsize=15, fontweight='bold', pad=15)
-ax2.bar_label(ax2.containers[0], padding=8, fontweight='bold', fontsize=11)
+ax2.set_title('2.Top singko 5 Negara Terbanyak', fontsize=12, fontweight='bold', pad=15)
+ax2.bar_label(ax2.containers[0], padding=8, fontweight='bold', fontsize=12)
 
 ax3 = fig.add_subplot(gs[1, :])
 plotBulan = sns.barplot(x='MonthName', y='Customer Id', data=dataBulanan, hue='MonthName', 
                         palette='coolwarm', legend=False, ax=ax3)
-ax3.set_title('3. Analisis Musiman: Lonjakan per Bulan ', fontsize=15, fontweight='bold', pad=15)
+ax3.set_title('3. Analisis Musiman: Lonjakan per Bulan ', fontsize=12, fontweight='bold', pad=15)
 ax3.set_xlabel('Bulan', fontsize=12)
 ax3.set_ylabel('Jumlah Subscriber', fontsize=12)
 
